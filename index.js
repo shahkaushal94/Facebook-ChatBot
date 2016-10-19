@@ -114,9 +114,9 @@ function whatsmylunch(recipientId, text) {
             
             message = {
                 "attachment": {
-                    "type": "template",
+                    "type": "text",
                     "payload": {
-                        "template_type": "generic",
+                        "text_type": "generic",
                         "elements": [{
                             "title": "Ingredients : Baked Potato, Onion, Bell Peppers, Oil, Chilly powder, mustard powder, black cumin seed, black mustard seeds, turmeric Directions: 1. Take 2 tb spn of oil in a pan and heat it 2. Add black mustard seeds,black cumin seeds after 2 minutes of heating. 3.Chop all veggies and put in the bowl. 4. let it boil for 5 minutes. Add red chilly powder and mustard powder and spices. ",
                             "subtitle": "Green Gram Delight",
