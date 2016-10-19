@@ -109,7 +109,7 @@ function whatsmylunch(recipientId, text) {
     
     if (values.length === 3 && values[0] === 'whats' && values[1] === 'my' && values[2] === 'lunch?') {
         
-            
+            console.log = "inside of the function";
             //var imageUrl = "Ingredients : Baked Potato, Onion, Bell Peppers, Oil, Chilly powder, mustard powder, black cumin seed, black mustard seeds, turmeric Directions: 1. Take 2 tb spn of oil in a pan and heat it 2. Add black mustard seeds,black cumin seeds after 2 minutes of heating. 3.Chop all veggies and put in the bowl. 4. let it boil for 5 minutes. Add red chilly powder and mustard powder and spices. " ;
             
             message = {
