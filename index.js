@@ -52,6 +52,7 @@ function sendMessage(recipientId, message) {
     });
 };
 
+
 // send rich message with kitten
 function kittenMessage(recipientId, text) {
     
@@ -96,10 +97,3 @@ function kittenMessage(recipientId, text) {
     
 };
 
-if (event.message && event.message.text) {
-    if (!kittenMessage(event.sender.id, event.message.text)) {
-        sendMessage(event.sender.id, {text: "Echo: " + event.message.text});
-    }
-} else if (event.postback) {
-    console.log("Postback received: " + JSON.stringify(event.postback));
-}
