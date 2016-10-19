@@ -128,7 +128,7 @@ function whatsmylunch(recipientId, text) {
                                 }, {
                                 "type": "postback",
                                 "title": "I like this",
-                                "payload": "User " + recipientId + " likes kitten " + imageUrl,
+                                "payload": "User " + recipientId + " likes kitten " ,
                             }]
                         }]
                     }
