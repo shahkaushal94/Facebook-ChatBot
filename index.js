@@ -123,7 +123,7 @@ function whatsmylunch(recipientId, text) {
                             "imageUrl": imageUrl,
                             "buttons": [{
                                 "type": "web_url",
-                                "url": imageUrl,
+                                //"url": imageUrl,
                                 "title": "Show kitten"
                                 }, {
                                 "type": "postback",
