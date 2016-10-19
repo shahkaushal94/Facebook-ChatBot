@@ -101,6 +101,54 @@ function kittenMessage(recipientId, text) {
 
 
 
+
+// send rich message with kitten
+function TarlaDalal(recipientId, text) {
+    
+    text = text || "";
+    var values = text.split(' ');
+    
+    if (values.length === 3 && values[0] === 'whats' && values[1] === 'my' && values[2] === 'lunch?') {
+          var imageUrl = "http://www.tarladalal.com/Broccoli-and-Zucchini-in-Red-Capsicum-Gravy-39679r";
+            
+            message = {
+                "attachment": {
+                    "type": "template",
+                    "payload": {
+                        "template_type": "generic",
+                        "elements": [{
+                            "title": "Lunch Recipe",
+                            "subtitle": "Healthy food",
+                            "image_url": imageUrl ,
+                            "buttons": [{
+                                "type": "web_url",
+                                "url": imageUrl,
+                                "title": "Take me there!"
+                                }, {
+                                "type": "postback",
+                                "title": "I like this",
+                                "payload": "User " + recipientId + " likes kitten " + imageUrl,
+                            }]
+                        }]
+                    }
+                }
+            };
+    
+            sendMessage(recipientId, message);
+            
+            return true;
+        
+    }
+    
+    return false;
+    
+};
+
+
+
+
+
+
 // send rich message with kitten
 function whatsmylunch(recipientId, text) {
     
