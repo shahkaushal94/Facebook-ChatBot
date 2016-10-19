@@ -1,17 +1,21 @@
 {
   "name": "wml",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"start" : "node index.js"
+    "start": "node index.js"
   },
-  "author": "",
+  "author": "kaushal",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "request": "^2.75.0"
-  }
+  },
+  "devDependencies": {},
+  "description": "decide what to eat",
+  "keywords": [
+    "eat"
+  ]
 }
