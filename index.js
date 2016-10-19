@@ -99,3 +99,52 @@ function kittenMessage(recipientId, text) {
     
 };
 
+
+
+// send rich message with kitten
+function whatsmylunch(recipientId, text) {
+    
+    text = text || "";
+    var values = text.split(' ');
+    
+    if (values.length === 3 && values[0] === 'whats' && values[1] === 'my' && values[2] === 'lunch?') {
+        
+            
+           // var imageUrl = "https://placekitten.com/" + Number(values[1]) + "/" + Number(values[2]);
+            
+            message = {
+                "attachment": {
+                    "type": "template",
+                    "payload": {
+                        "template_type": "generic",
+                        "elements": [{
+                            "title": "Kitten",
+                            "subtitle": "Cute kitten picture",
+                            "replyText": "Ingredients : Baked Potato, Onion, Bell Peppers, Oil, Chilly powder, mustard powder, black cumin seed, black mustard seeds, turmeric Directions: 1. Take 2 tb spn of oil in a pan and heat it 2. Add black mustard seeds,black cumin seeds after 2 minutes of heating. 3.Chop all veggies and put in the bowl. 4. let it boil for 5 minutes. Add red chilly powder and mustard powder and spices. ",
+                            "buttons": [{
+                                "type": "web_url",
+                                "url": imageUrl,
+                                "title": "Show kitten"
+                                }, {
+                                "type": "postback",
+                                "title": "I like this",
+                                "payload": "User " + recipientId + " likes kitten " + imageUrl,
+                            }]
+                        }]
+                    }
+                }
+            };
+    
+            sendMessage(recipientId, message);
+            
+            return true;
+        
+    }
+    
+    return false;
+    
+};
+
+
+
+
