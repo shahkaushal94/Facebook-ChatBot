@@ -27,13 +27,11 @@ app.post('/webhook', function (req, res) {
     for (i = 0; i < events.length; i++) {
         var event = events[i];
         if (event.message && event.message.text) {
-			if (!TarlaDalal(event.sender.id, event.message.text)) {
+			if (!TarlaDalal(event.sender.id, event.message.text) && !SomethingElse(event.sender.id, event.message.text)) {
         sendMessage(event.sender.id, {text: event.message.text});
         }
 		
-			else if (!SomethingElse(event.sender.id, event.message.text)) {
-        sendMessage(event.sender.id, {text: event.message.text});
-        }
+		
         }
     }
     res.sendStatus(200);
