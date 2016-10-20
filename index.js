@@ -30,6 +30,10 @@ app.post('/webhook', function (req, res) {
 			if (!TarlaDalal(event.sender.id, event.message.text)) {
         sendMessage(event.sender.id, {text: event.message.text});
         }
+		
+			if (!SomethingElse(event.sender.id, event.message.text)) {
+        sendMessage(event.sender.id, {text: event.message.text});
+        }
         }
     }
     res.sendStatus(200);
@@ -144,6 +148,47 @@ function TarlaDalal(recipientId, text) {
     
 };
 
+// send rich message with kitten
+function SomethingElse(recipientId, text) {
+    
+    text = text || "";
+    var values = text.split(' ');
+    
+    if (values.length === 2 && values[0] === 'Something' && values[1] === 'else' ) {
+          var imageUrl = "http://www.eatingwell.com/recipe/253104/no-bake-macaroni-cheese/";
+            
+            message = {
+                "attachment": {
+                    "type": "template",
+                    "payload": {
+                        "template_type": "generic",
+                        "elements": [{
+                            "title": "Broccoli and Zucchini in Red Capsicum Gravy",
+                            "subtitle": "Healthy food",
+                            "image_url": imageUrl ,
+                            "buttons": [{
+                                "type": "web_url",
+                                "url": imageUrl,
+                                "title": "Take me there!"
+                                }, {
+                                "type": "postback",
+                                "title": "Something else",
+                                "payload": "User " + recipientId + " likes kitten " + imageUrl,
+                            }]
+                        }]
+                    }
+                }
+            };
+    
+            sendMessage(recipientId, message);
+            
+            return true;
+        
+    }
+    
+    return false;
+    
+};
 
 
 
