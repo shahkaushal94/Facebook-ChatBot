@@ -165,11 +165,7 @@ function SomethingElse(recipientId, text) {
                                 "type": "web_url",
                                 "url": imageUrl,
                                 "title": "Take me there!"
-                                }, {
-                                "type": "postback",
-                                "title": "Something else",
-                                "payload": "User " + recipientId + " likes kitten " + imageUrl,
-                            }]
+                                }]
                         }]
                     }
                 }
