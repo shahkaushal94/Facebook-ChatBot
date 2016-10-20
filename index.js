@@ -117,7 +117,7 @@ function TarlaDalal(recipientId, text) {
                     "payload": {
                         "template_type": "generic",
                         "elements": [{
-                            "title": "Lunch Recipe",
+                            "title": "Broccoli and Zucchini in Red Capsicum Gravy",
                             "subtitle": "Healthy food",
                             "image_url": imageUrl ,
                             "buttons": [{
@@ -126,7 +126,7 @@ function TarlaDalal(recipientId, text) {
                                 "title": "Take me there!"
                                 }, {
                                 "type": "postback",
-                                "title": "I like this",
+                                "title": "Something else",
                                 "payload": "User " + recipientId + " likes kitten " + imageUrl,
                             }]
                         }]
