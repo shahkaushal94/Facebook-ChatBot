@@ -148,7 +148,7 @@ function SomethingElse(recipientId, text) {
     text = text || "";
     var values = text.split(' ');
     console.log("In something else");
-    if (values.length === 2 && values[0] === 'Something' && values[1] === 'else' ) {
+    if (values.length === 2 && values[0] === 'something' && values[1] === 'else' ) {
           var imageUrl = "http://www.eatingwell.com/recipe/253104/no-bake-macaroni-cheese/";
             
     console.log("In something else ka if");
