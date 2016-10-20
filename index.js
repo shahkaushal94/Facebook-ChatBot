@@ -110,7 +110,7 @@ function TarlaDalal(recipientId, text) {
     text = text || "";
     var values = text.split(' ');
     
-    if (values.length === 3 && values[0] === 'What''s' && values[1] === 'my' && values[2] === 'lunch?') {
+    if (values.length === 3 && values[0] === 'What\'s' && values[1] === 'my' && values[2] === 'lunch?') {
           var imageUrl = "http://www.tarladalal.com/Broccoli-and-Zucchini-in-Red-Capsicum-Gravy-39679r";
             
             message = {
