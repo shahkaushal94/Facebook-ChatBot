@@ -151,17 +151,18 @@ function SomethingElse(recipientId, text) {
     
     text = text || "";
     var values = text.split(' ');
-    
-    if (values.length === 2 && values[0] === 'Something' && values[1] === 'Else' ) {
+    console.log("In something else");
+    if (values.length === 2 && values[0] === 'Something' && values[1] === 'else' ) {
           var imageUrl = "http://www.eatingwell.com/recipe/253104/no-bake-macaroni-cheese/";
             
+    console.log("In something else ka if");
             message = {
                 "attachment": {
                     "type": "template",
                     "payload": {
                         "template_type": "generic",
                         "elements": [{
-                            "title": "Broccoli and Zucchini in Red Capsicum Gravy",
+                            "title": "No bake Macaroni Cheese",
                             "subtitle": "Healthy food",
                             "image_url": imageUrl ,
                             "buttons": [{
